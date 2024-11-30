@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function relBooks()
+    {
+        return $this->hasMany('App\Models\Models\ModelBook', 'id_user');
+    }
 }

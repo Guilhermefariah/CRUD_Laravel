@@ -3,15 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Models\ModelBook;
+use App\Models\User;
 
 class BookController extends Controller
 {
+    private $objUser;
+    private $objBook;
+
+    public function __construct()
+    {
+        $this->objUser = new User();
+        $this->objBook = new ModelBook();
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view(view: 'index');
+        $book=$this->objBook->all();
+        return view('index', compact('book'));
     }
 
     /**
