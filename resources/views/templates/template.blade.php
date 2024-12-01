@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/app.css">
     <title>CRUD com Laravel</title>
 </head>
-<body style="background-image: linear-gradient(to right, #4facfe, #00f2fe, #6a11cb);">
+<body style="font-family: 'sans-serif'; background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);">
     <div>
         <h1 class="text-center text-white font-bold text-3xl">CRUD com Laravel</h1>
         @yield('content')

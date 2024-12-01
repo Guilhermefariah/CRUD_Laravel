@@ -5,8 +5,9 @@
         <h1 class="text-center text-white font-bold text-3xl">Visualizar</h1>
         <hr>
     </div>
+    
     <div class="col-8 m-auto">
-        <table class="table table-hover">
+        <table class="table table-hover text-white">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Id</th>
@@ -17,11 +18,12 @@
                     <th scope="col">E-mail</th>
                 </tr>
             </thead>
+
             <tbody>
                 @php
                     $user = $book->find($book->id)->relUsers;
                 @endphp
-                <tr class="text-white font-bold">
+                <tr class="text-white">
                     <th scope="row">{{ $book->id }}</th>
                     <td>{{ $book->title }}</td>
                     <td>{{ $book->pages }}</td>

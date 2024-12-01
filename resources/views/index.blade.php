@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-8 m-auto">
-        <table class="table table-hover">
+        <table class="table table-hover text-white">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Id</th>
@@ -44,7 +44,7 @@
             </tbody>
         </table>
         <div>
-            <a href="#">
+            <a href="{{ url('books/create') }}">
                 <button class="btn btn-dark">Cadastrar</button>
             </a>
         </div>
