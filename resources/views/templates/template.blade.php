@@ -12,5 +12,6 @@
         <h1 class="text-center text-white font-bold text-3xl">CRUD com Laravel</h1>
         @yield('content')
     </div>
+    <script src="{{ ("assets/js/javascript.js") }}"></script>
 </body>
 </html>
