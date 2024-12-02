@@ -49,5 +49,6 @@
                 <button class="btn btn-dark">Cadastrar</button>
             </a>
         </div>
+        {{ $book->links() }}
     </div>
 @endsection
