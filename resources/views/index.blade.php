@@ -48,7 +48,7 @@
         </table>
         <div>
             <a href="{{ url('books/create') }}">
-                <button class="btn btn-dark">Cadastrar</button>
+                <button class="btn btn-primary">Cadastrar</button>
             </a>
         </div>
         {{ $book->links() }}
