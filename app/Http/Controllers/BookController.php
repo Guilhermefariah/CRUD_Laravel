@@ -4,16 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BookRequest;
 use App\Models\Models\ModelBook;
-use App\Models\User;
 
 class BookController extends Controller
 {
-    private $objUser;
     private $objBook;
 
     public function __construct()
     {
-        $this->objUser = new User();
         $this->objBook = new ModelBook();
     }
 
@@ -31,8 +28,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        $users=$this->objUser->all();
-        return view('create', compact('users'));
+        return view('create');
     }
 
     /**
@@ -44,7 +40,6 @@ class BookController extends Controller
             'title'=>$request->title,
             'pages'=>$request->pages,
             'price'=>$request->price,
-            'id_user'=>$request->id_user
         ]);
         if ($cad){
             return redirect('books');
@@ -66,8 +61,7 @@ class BookController extends Controller
     public function edit(string $id)
     {
         $book=$this->objBook->find($id);
-        $users=$this->objUser->all();
-        return view('create', compact('book', 'users'));
+        return view('create', compact('book'));
     }
 
     /**
@@ -79,7 +73,6 @@ class BookController extends Controller
             'title'=>$request->title,
             'pages'=>$request->pages,
             'price'=>$request->price,
-            'id_user'=>$request->id_user,
         ]);
         return redirect('books');
     }

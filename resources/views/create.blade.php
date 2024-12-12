@@ -33,12 +33,6 @@
                 <label for="title">Título</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Insira o título" value="{{$book->title ?? ''}}" required>
             </div>
-            <select class="form-control" name="id_user" id="id_user" required>
-                <option value="{{$book->relUsers->id ?? ''}}">{{$book->relUsers->name ?? ''}}</option>
-                @foreach ($users as $user)
-                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                @endforeach
-            </select>
             <div class="form-group">
                 <label for="pages">Páginas</label>
                 <input type="number" class="form-control" id="pages" name="pages" placeholder="Insira o número de páginas" value="{{$book->pages ?? ''}}" required>

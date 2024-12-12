@@ -13,7 +13,6 @@
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Título</th>
-                    <th scope="col">Autor</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Ações</th>
                 </tr>
@@ -21,13 +20,9 @@
 
             <tbody>
                 @foreach ($book as $books)
-                    @php
-                        $user = $books->find($books->id)->relUsers;
-                    @endphp
                     <tr>
                         <th scope="row">{{ $books->id }}</th>
                         <td>{{ $books->title }}</td>
-                        <td>{{ $user->name }}</td>
                         <td>{{ $books->price }}</td>
                         <td class="text-center">
                             <div class="btn group d-inline-block">
